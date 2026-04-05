@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>StyleHub - Fashion & Accessories</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <!-- Navigation Bar -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="nav-wrapper">
+                <div class="logo">
+                    <h1>StyleHub</h1>
+                </div>
+                <div class="search-bar">
+                    <input type="text" placeholder="Search for fashion items...">
+                    <button><i class="fas fa-search"></i></button>
+                </div>
+                <div class="nav-links">
+                    <a href="#women">Women</a>
+                    <a href="#men">Men</a>
+                    <a href="#accessories">Accessories</a>
+                    <a href="#sale">Sale</a>
+                </div>
+                <div class="nav-icons">
+                    <button id="wishlist-btn"><i class="fas fa-heart"></i><span class="badge">0</span></button>
+                    <button id="cart-btn"><i class="fas fa-shopping-cart"></i><span class="badge">0</span></button>
+                    <button id="account-btn"><i class="fas fa-user"></i></button>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <h2>Summer Collection 2026</h2>
+            <p>Discover the latest trends in fashion and accessories</p>
+            <button class="cta-btn">Shop Now</button>
+        </div>
+        <div class="hero-image">
+            <img src="https://via.placeholder.com/600x400?text=Summer+Collection" alt="Summer Collection">
+        </div>
+    </section>
+
+    <!-- Category Section -->
+    <section class="categories">
+        <div class="container">
+            <h2>Shop by Category</h2>
+            <div class="category-grid">
+                <div class="category-card" id="women">
+                    <img src="https://via.placeholder.com/250x250?text=Women" alt="Women's Fashion">
+                    <h3>Women's Fashion</h3>
+                    <p>Discover elegant styles for every occasion</p>
+                </div>
+                <div class="category-card" id="men">
+                    <img src="https://via.placeholder.com/250x250?text=Men" alt="Men's Fashion">
+                    <h3>Men's Fashion</h3>
+                    <p>Classic and modern looks for the modern man</p>
+                </div>
+                <div class="category-card" id="accessories">
+                    <img src="https://via.placeholder.com/250x250?text=Accessories" alt="Accessories">
+                    <h3>Accessories</h3>
+                    <p>Complete your look with our curated selection</p>
+                </div>
+                <div class="category-card" id="footwear">
+                    <img src="https://via.placeholder.com/250x250?text=Footwear" alt="Footwear">
+                    <h3>Footwear</h3>
+                    <p>Step up your style with premium shoes</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products -->
+    <section class="featured-products">
+        <div class="container">
+            <h2>Featured Products</h2>
+            <div class="product-grid" id="productGrid">
+                <!-- Products will be loaded here by JavaScript -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Stay Updated with Latest Trends</h2>
+            <form class="newsletter-form" id="newsletterForm">
+                <input type="email" placeholder="Enter your email" required>
+                <button type="submit">Subscribe</button>
+            </form>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h4>About Us</h4>
+                    <p>StyleHub is your one-stop destination for fashion and accessories.</p>
+                </div>
+                <div class="footer-section">
+                    <h4>Quick Links</h4>
+                    <ul>
+                        <li><a href="#">Shipping Info</a></li>
+                        <li><a href="#">Returns</a></li>
+                        <li><a href="#">FAQ</a></li>
+                        <li><a href="#">Contact Us</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h4>Follow Us</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 StyleHub. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Cart Sidebar -->
+    <div class="cart-sidebar" id="cartSidebar">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-btn" id="closeCart">&times;</button>
+        </div>
+        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <strong>Total:</strong>
+                <span id="cartTotal">$0.00</span>
+            </div>
+            <button class="checkout-btn">Proceed to Checkout</button>
+        </div>
+    </div>
+
+    <!-- Product Modal -->
+    <div class="modal" id="productModal">
+        <div class="modal-content">
+            <button class="modal-close">&times;</button>
+            <div class="modal-body" id="modalBody"></div>
+        </div>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+</html>
